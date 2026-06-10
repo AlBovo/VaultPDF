@@ -1,6 +1,6 @@
 "use client"
 
-import { ShieldCheck } from "lucide-react"
+import Link from "next/link"
 import { useI18n } from "@/lib/i18n"
 
 export function SiteFooter() {
@@ -11,6 +11,19 @@ export function SiteFooter() {
         <p className="max-w-sm text-xs leading-relaxed text-muted-foreground text-pretty">
           {t("brand.tagline")}
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-[10px] uppercase tracking-widest text-muted-foreground">
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
+            {t("nav.privacy")}
+          </Link>
+          <a
+            href="https://github.com/AlBovo/VaultPDF"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            GitHub repository
+          </a>
+        </div>
         <div className="h-px w-8 bg-border" />
         <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
           VaultPDF — Claude & AlBovo

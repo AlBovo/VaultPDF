@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'VaultPDF — Private, in-browser PDF tools',
+  title: 'VaultPDF | Private, in-browser PDF tools',
   description:
     'VaultPDF processes every PDF entirely in your browser. No uploads, no servers, no tracking. Merge, split, rotate, watermark, sign and convert PDFs privately. Developed by Claude & AlBovo.',
   generator: 'v0.app',
