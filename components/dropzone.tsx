@@ -52,15 +52,13 @@ export function Dropzone({
           handleFiles(e.dataTransfer.files)
         }}
         className={cn(
-          "flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border bg-card px-6 py-12 text-center transition-colors",
-          dragging && "border-primary bg-accent",
+          "flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-border bg-card px-6 py-14 text-center transition-all",
+          dragging && "border-foreground bg-accent",
         )}
       >
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-primary">
-          <Upload className="h-6 w-6" />
-        </span>
-        <span className="font-medium">{t("common.dropTitle")}</span>
-        <span className="text-sm text-muted-foreground">
+        <Upload className="h-5 w-5 text-muted-foreground" />
+        <span className="text-sm font-medium">{t("common.dropTitle")}</span>
+        <span className="text-xs text-muted-foreground">
           {t("common.dropHint")}
         </span>
         <input
@@ -78,20 +76,20 @@ export function Dropzone({
           {files.map((f, i) => (
             <li
               key={`${f.name}-${i}`}
-              className="flex items-center gap-3 rounded-lg border border-border bg-card px-3 py-2"
+              className="flex items-center gap-3 rounded-lg border border-border bg-card px-3 py-2.5"
             >
-              <FileText className="h-4 w-4 shrink-0 text-primary" />
+              <FileText className="h-4 w-4 shrink-0 text-muted-foreground" />
               <span className="flex-1 truncate text-sm">{f.name}</span>
-              <span className="shrink-0 text-xs text-muted-foreground">
+              <span className="shrink-0 text-[10px] uppercase tracking-wider text-muted-foreground">
                 {(f.size / 1024 / 1024).toFixed(2)} MB
               </span>
               <button
                 type="button"
                 onClick={() => removeAt(i)}
                 aria-label="Remove file"
-                className="text-muted-foreground transition-colors hover:text-destructive"
+                className="text-muted-foreground transition-colors hover:text-foreground"
               >
-                <X className="h-4 w-4" />
+                <X className="h-3.5 w-3.5" />
               </button>
             </li>
           ))}

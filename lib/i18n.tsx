@@ -256,6 +256,75 @@ export const dict: Dict = {
     it: "Questo è un modello generico, non consulenza legale. Fallo revisionare da un avvocato prima dell'uso.",
   },
 
+  // Redact PDF
+  "redact.draw": { en: "Draw rectangles over areas to redact", it: "Disegna rettangoli sulle aree da oscurare" },
+  "redact.apply": { en: "Apply redactions & download", it: "Applica oscuramenti e scarica" },
+  "redact.undo": { en: "Undo", it: "Annulla" },
+  "redact.clear": { en: "Clear", it: "Cancella" },
+
+  // Auto-Redact PII
+  "pii.scan": { en: "Scan for PII", it: "Cerca dati personali" },
+  "pii.found": { en: "Found {n} items", it: "Trovati {n} elementi" },
+  "pii.none": { en: "No PII detected", it: "Nessun dato personale rilevato" },
+  "pii.apply": { en: "Redact selected items & download", it: "Oscura elementi selezionati e scarica" },
+  "pii.selectAll": { en: "Select all", it: "Seleziona tutti" },
+  "pii.deselectAll": { en: "Deselect all", it: "Deseleziona tutti" },
+
+  // OCR
+  "ocr.run": { en: "Run OCR", it: "Esegui OCR" },
+  "ocr.engineNote": {
+    en: "OCR uses Tesseract.js which downloads a ~15 MB WASM engine on first use. All processing stays in your browser.",
+    it: "L'OCR usa Tesseract.js che scarica un motore WASM di ~15 MB al primo utilizzo. Tutta l'elaborazione resta nel browser.",
+  },
+  "ocr.copy": { en: "Copy text", it: "Copia testo" },
+  "ocr.copied": { en: "Copied", it: "Copiato" },
+  "ocr.download": { en: "Download .txt", it: "Scarica .txt" },
+
+  // Edit PDF
+  "edit.view": { en: "View", it: "Visualizza" },
+  "edit.addText": { en: "Add Text", it: "Aggiungi testo" },
+  "edit.addImage": { en: "Add Image", it: "Aggiungi immagine" },
+  "edit.textPlaceholder": {
+    en: "Type text, then click on the page to place it…",
+    it: "Digita il testo, poi clicca sulla pagina per posizionarlo…",
+  },
+  "edit.apply": { en: "Apply edits & download", it: "Applica modifiche e scarica" },
+
+  // PDF to Excel
+  "excel.convert": { en: "Convert to Excel", it: "Converti in Excel" },
+  "excel.extracting": { en: "Extracting tables…", it: "Estrazione tabelle…" },
+
+  // PDF to Word
+  "word.convert": { en: "Convert to Word", it: "Converti in Word" },
+  "word.converting": { en: "Converting to Word…", it: "Conversione in Word…" },
+
+  // Word to PDF
+  "wordToPdf.convert": { en: "Convert to PDF", it: "Converti in PDF" },
+  "wordToPdf.converting": { en: "Converting to PDF…", it: "Conversione in PDF…" },
+  "wordToPdf.note": {
+    en: "Only .docx files are supported. This conversion preserves text content but may not retain complex formatting like images or tables.",
+    it: "Solo i file .docx sono supportati. La conversione preserva il testo ma potrebbe non mantenere formattazioni complesse come immagini o tabelle.",
+  },
+
+  // Compare PDF
+  "compare.compare": { en: "Compare PDFs", it: "Confronta PDF" },
+  "compare.original": { en: "Original PDF", it: "PDF originale" },
+  "compare.modified": { en: "Modified PDF", it: "PDF modificato" },
+  "compare.sideBySide": { en: "Side by side", it: "Affiancati" },
+  "compare.overlay": { en: "Overlay diff", it: "Sovrapponi differenze" },
+  "compare.diffNote": {
+    en: "Differences highlighted in magenta",
+    it: "Le differenze sono evidenziate in magenta",
+  },
+
+  // Compress PPT
+  "ppt.note": {
+    en: "Only .pptx files (Office Open XML) are supported. Legacy .ppt files cannot be processed client-side.",
+    it: "Solo i file .pptx (Office Open XML) sono supportati. I file .ppt legacy non possono essere elaborati nel browser.",
+  },
+  "ppt.quality": { en: "Image quality", it: "Qualità immagine" },
+  "ppt.compress": { en: "Compress PPTX", it: "Comprimi PPTX" },
+
   // Coming soon
   "common.comingSoon": { en: "Coming soon", it: "In arrivo" },
   "common.comingSoonDesc": {

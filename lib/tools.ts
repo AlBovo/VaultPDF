@@ -53,20 +53,20 @@ export const categories: { id: CategoryId; labelKey: string }[] = [
 export const tools: Tool[] = [
   // Optimization & Organization
   { id: "compress-pdf", category: "optimize", icon: Archive, implemented: true },
-  { id: "compress-ppt", category: "optimize", icon: Presentation, implemented: false },
+  { id: "compress-ppt", category: "optimize", icon: Presentation, implemented: true },
   { id: "merge-pdf", category: "optimize", icon: Combine, implemented: true },
   { id: "split-pdf", category: "optimize", icon: Scissors, implemented: true },
 
   // Security & Sanitization
-  { id: "redact-pdf", category: "security", icon: EyeOff, implemented: false },
-  { id: "auto-redact", category: "security", icon: ShieldAlert, implemented: false },
+  { id: "redact-pdf", category: "security", icon: EyeOff, implemented: true },
+  { id: "auto-redact", category: "security", icon: ShieldAlert, implemented: true },
   { id: "strip-metadata", category: "security", icon: Eraser, implemented: true },
   { id: "flatten-pdf", category: "security", icon: Layers, implemented: true },
   { id: "sanitize-llm", category: "security", icon: Sparkles, implemented: true },
-  { id: "pdf-ocr", category: "security", icon: ScanText, implemented: false },
+  { id: "pdf-ocr", category: "security", icon: ScanText, implemented: true },
 
   // Editing Tools
-  { id: "edit-pdf", category: "edit", icon: SquarePen, implemented: false },
+  { id: "edit-pdf", category: "edit", icon: SquarePen, implemented: true },
   { id: "watermark", category: "edit", icon: Stamp, implemented: true },
   { id: "remove-pages", category: "edit", icon: FileMinus, implemented: true },
   { id: "rotate-pdf", category: "edit", icon: RotateCw, implemented: true },
@@ -74,13 +74,13 @@ export const tools: Tool[] = [
   { id: "sign-pdf", category: "edit", icon: Signature, implemented: true },
 
   // Conversion Tools
-  { id: "pdf-to-excel", category: "convert", icon: FileSpreadsheet, implemented: false },
-  { id: "pdf-to-word", category: "convert", icon: FileType, implemented: false },
+  { id: "pdf-to-excel", category: "convert", icon: FileSpreadsheet, implemented: true },
+  { id: "pdf-to-word", category: "convert", icon: FileType, implemented: true },
   { id: "pdf-to-images", category: "convert", icon: Images, implemented: true },
   { id: "images-to-pdf", category: "convert", icon: FileImage, implemented: true },
   { id: "csv-to-pdf", category: "convert", icon: Table, implemented: true },
-  { id: "word-to-pdf", category: "convert", icon: FileText, implemented: false },
-  { id: "compare-pdf", category: "convert", icon: GitCompare, implemented: false },
+  { id: "word-to-pdf", category: "convert", icon: FileText, implemented: true },
+  { id: "compare-pdf", category: "convert", icon: GitCompare, implemented: true },
 
   // Document Generation
   { id: "nda-generator", category: "generate", icon: FileSignature, implemented: true },

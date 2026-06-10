@@ -21,7 +21,7 @@ export default async function ToolPage({
   return (
     <div className="flex min-h-svh flex-col">
       <SiteHeader />
-      <ToolShell tool={tool}>
+      <ToolShell toolId={tool.id}>
         <ToolRunner toolId={tool.id} implemented={tool.implemented} />
       </ToolShell>
       <SiteFooter />

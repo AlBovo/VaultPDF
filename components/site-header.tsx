@@ -18,28 +18,26 @@ export function SiteHeader() {
   const langs: Lang[] = ["en", "it"]
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <ShieldCheck className="h-5 w-5" />
-          </span>
-          <span className="text-lg font-semibold tracking-tight">
-            Vault<span className="text-primary">PDF</span>
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4">
+        <Link href="/" className="flex items-center gap-2">
+          <ShieldCheck className="h-5 w-5" />
+          <span className="text-sm font-semibold tracking-tight">
+            Vault<span className="font-light">PDF</span>
           </span>
         </Link>
 
-        <div className="flex items-center gap-2">
-          <div className="flex items-center rounded-md border border-border p-0.5">
+        <div className="flex items-center gap-1">
+          <div className="flex items-center rounded-full border border-border p-0.5">
             {langs.map((l) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
                 aria-pressed={lang === l}
                 className={cn(
-                  "rounded px-2 py-1 text-xs font-medium uppercase transition-colors",
+                  "rounded-full px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider transition-colors",
                   lang === l
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-foreground text-background"
                     : "text-muted-foreground hover:text-foreground",
                 )}
               >
@@ -51,15 +49,16 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
+            className="h-8 w-8 rounded-full"
             aria-label="Toggle theme"
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }
           >
             {mounted && resolvedTheme === "dark" ? (
-              <Sun className="h-5 w-5" />
+              <Sun className="h-4 w-4" />
             ) : (
-              <Moon className="h-5 w-5" />
+              <Moon className="h-4 w-4" />
             )}
           </Button>
         </div>

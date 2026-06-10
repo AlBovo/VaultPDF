@@ -27,6 +27,16 @@ const registry: Record<string, ReturnType<typeof dynamic>> = {
   "compress-pdf": dynamic(() => import("./compress-pdf").then((m) => m.CompressPdf), { loading }),
   "unlock-pdf": dynamic(() => import("./unlock-pdf").then((m) => m.UnlockPdf), { loading }),
   "nda-generator": dynamic(() => import("./nda-generator").then((m) => m.NdaGenerator), { loading }),
+  // Newly implemented tools
+  "compress-ppt": dynamic(() => import("./compress-ppt").then((m) => m.CompressPpt), { loading }),
+  "redact-pdf": dynamic(() => import("./redact-pdf").then((m) => m.RedactPdf), { loading }),
+  "auto-redact": dynamic(() => import("./auto-redact-pii").then((m) => m.AutoRedactPii), { loading }),
+  "pdf-ocr": dynamic(() => import("./pdf-ocr").then((m) => m.PdfOcr), { loading }),
+  "edit-pdf": dynamic(() => import("./edit-pdf").then((m) => m.EditPdf), { loading }),
+  "pdf-to-excel": dynamic(() => import("./pdf-to-excel").then((m) => m.PdfToExcel), { loading }),
+  "pdf-to-word": dynamic(() => import("./pdf-to-word").then((m) => m.PdfToWord), { loading }),
+  "word-to-pdf": dynamic(() => import("./word-to-pdf").then((m) => m.WordToPdf), { loading }),
+  "compare-pdf": dynamic(() => import("./compare-pdf").then((m) => m.ComparePdf), { loading }),
 }
 
 export function ToolRunner({
@@ -42,11 +52,11 @@ export function ToolRunner({
   if (!implemented || !Comp) {
     return (
       <div className="flex flex-col items-center gap-3 rounded-xl border border-dashed border-border bg-card px-6 py-16 text-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-primary">
-          <Clock className="h-6 w-6" />
+        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border">
+          <Clock className="h-5 w-5 text-muted-foreground" />
         </span>
-        <h2 className="text-lg font-medium">{t("common.comingSoon")}</h2>
-        <p className="max-w-md text-pretty text-sm text-muted-foreground">
+        <h2 className="text-sm font-medium">{t("common.comingSoon")}</h2>
+        <p className="max-w-md text-pretty text-xs text-muted-foreground">
           {t("common.comingSoonDesc")}
         </p>
       </div>
